@@ -47,6 +47,12 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Gaming category colors
+        math: "hsl(var(--math))",
+        reading: "hsl(var(--reading))",
+        science: "hsl(var(--science))",
+        fun: "hsl(var(--fun))",
+        random: "hsl(var(--random))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
