@@ -29,8 +29,8 @@ export const CategoryTabs = ({ activeCategory = "math", onCategoryChange }: Cate
             onMouseEnter={() => setHoveredCategory(category.id)}
             onMouseLeave={() => setHoveredCategory(null)}
             className={`
-              px-6 py-3 rounded-lg font-semibold text-lg transition-all duration-300 ease-out
-              relative overflow-hidden min-w-[120px]
+              px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 ease-out
+              relative overflow-hidden min-w-[100px]
               ${isActive ? 'bg-secondary text-foreground' : 'bg-card text-muted-foreground hover:text-foreground'}
               ${isHovered ? `shadow-lg border-2 border-${category.color}` : 'border-2 border-transparent'}
             `}
