@@ -81,18 +81,15 @@ const Index = () => {
     <main className="min-h-screen bg-background">
       {/* Header Section */}
       <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
-        <div className="container mx-auto px-6 py-6">
-          <div className="flex flex-col items-center space-y-6">
-            <h1 className="text-4xl md:text-5xl font-bold text-center bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-              Game Library
-            </h1>
+        <div className="container mx-auto px-6 py-3">
+          <div className="flex flex-col items-center space-y-3">
             <SearchBar onSearch={setSearchQuery} />
           </div>
         </div>
       </header>
 
       {/* Category Navigation */}
-      <section className="py-8 border-b border-border">
+      <section className="py-4 border-b border-border">
         <div className="container mx-auto px-6">
           <CategoryTabs 
             activeCategory={activeCategory}
@@ -102,7 +99,7 @@ const Index = () => {
       </section>
 
       {/* Games Grid */}
-      <section className="py-12">
+      <section className="py-6">
         <div className="container mx-auto px-6">
           <GameGrid 
             games={filteredGames}

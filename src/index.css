@@ -39,12 +39,12 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
 
-    /* Gaming category colors */
-    --math: 220 95% 75%;
-    --reading: 145 85% 65%;
-    --science: 0 85% 70%;
-    --fun: 45 95% 70%;
-    --random: 270 85% 75%;
+    /* Gaming category colors - bright solid colors */
+    --math: 220 100% 80%;
+    --reading: 145 90% 70%;
+    --science: 0 90% 75%;
+    --fun: 45 100% 75%;
+    --random: 270 90% 80%;
 
     /* Gaming effects */
     --glow-primary: 240 75% 60%;

@@ -32,19 +32,15 @@ export const CategoryTabs = ({ activeCategory = "math", onCategoryChange }: Cate
               px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 ease-out
               relative overflow-hidden min-w-[100px]
               ${isActive ? 'bg-secondary text-foreground' : 'bg-card text-muted-foreground hover:text-foreground'}
-              ${isHovered ? `shadow-lg border-2 border-${category.color}` : 'border-2 border-transparent'}
+              ${isHovered ? '' : ''}
             `}
             style={{
-              boxShadow: isHovered ? `0 0 20px hsl(var(--${category.color}) / 0.3)` : undefined,
+              backgroundColor: isHovered ? `hsl(var(--${category.color}))` : undefined,
+              color: isHovered ? 'hsl(0 0% 100%)' : undefined,
+              boxShadow: isHovered ? `0 0 20px hsl(var(--${category.color}) / 0.4)` : undefined,
             }}
           >
             <span className="relative z-10">{category.name}</span>
-            {isHovered && (
-              <div 
-                className="absolute inset-0 opacity-10 transition-opacity duration-300"
-                style={{ backgroundColor: `hsl(var(--${category.color}))` }}
-              />
-            )}
           </button>
         );
       })}
