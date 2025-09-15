@@ -7,11 +7,12 @@ interface Game {
   image: string;
   rating: number;
   category: "math" | "reading" | "science" | "fun" | "random";
+  url: string;
 }
 
 interface GameGridProps {
   games: Game[];
-  onGamePlay?: (gameId: string) => void;
+  onGamePlay?: (game: Game) => void;
 }
 
 export const GameGrid = ({ games, onGamePlay }: GameGridProps) => {
@@ -36,7 +37,7 @@ export const GameGrid = ({ games, onGamePlay }: GameGridProps) => {
           image={game.image}
           rating={game.rating}
           category={game.category}
-          onPlay={() => onGamePlay?.(game.id)}
+          onPlay={() => onGamePlay?.(game)}
         />
       ))}
     </div>

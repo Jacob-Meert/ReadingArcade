@@ -43,5 +43,14 @@
     "image": "/random-game-icon.jpg",
     "rating": 3.9,
     "url": "https://example.com/random-trivia"
+  },
+  {
+    "id": "game-6",
+    "title": "Test Game",
+    "description": "A game made to test site functionality",
+    "category": "fun",
+    "image": "/random-game-icon.jpg",
+    "rating": 3.9,
+    "url": "/test"
   }
 ]
