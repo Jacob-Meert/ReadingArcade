@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import StackFireBall from "./games/StackFireBall.tsx";
+import TestPage from "./pages/Test";
 
 const queryClient = new QueryClient();
 
@@ -18,6 +19,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/games/StackFireBall" element={<StackFireBall />} />
+          <Route path="/test" element={<TestPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
