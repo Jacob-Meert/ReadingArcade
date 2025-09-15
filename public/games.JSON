@@ -1,0 +1,47 @@
+[
+  {
+    "id": "game-1",
+    "title": "Math Quiz",
+    "description": "Practice your arithmetic skills with timed questions.",
+    "category": "math",
+    "image": "/math-game-icon.jpg",
+    "rating": 4.5,
+    "url": "https://example.com/math-quiz"
+  },
+  {
+    "id": "game-2",
+    "title": "Reading Challenge",
+    "description": "Improve your vocabulary and comprehension with fun passages.",
+    "category": "reading",
+    "image": "/reading-game-icon.jpg",
+    "rating": 4.2,
+    "url": "https://example.com/reading-challenge"
+  },
+  {
+    "id": "game-3",
+    "title": "Penis Explorer",
+    "description": "Test your knowledge of planets, animals, and more!",
+    "category": "science",
+    "image": "/science-game-icon.jpg",
+    "rating": 4.6,
+    "url": "https://example.com/science-explorer"
+  },
+  {
+    "id": "game-4",
+    "title": "Puzzle Master",
+    "description": "Solve tricky puzzles and brain teasers.",
+    "category": "fun",
+    "image": "/fun-game-icon.jpg",
+    "rating": 4.0,
+    "url": "https://example.com/puzzle-master"
+  },
+  {
+    "id": "game-5",
+    "title": "Random Trivia",
+    "description": "A mix of random trivia questions across all subjects.",
+    "category": "random",
+    "image": "/random-game-icon.jpg",
+    "rating": 3.9,
+    "url": "https://example.com/random-trivia"
+  }
+]

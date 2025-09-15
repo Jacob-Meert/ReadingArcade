@@ -1,23 +1,33 @@
-import { Search } from "lucide-react";
-import { Input } from "@/components/ui/input";
+import React from "react";
 
 interface SearchBarProps {
+  value: string;                      // controlled input value from parent
+  onChange: (value: string) => void;  // update parent-held input state (no filtering)
+  onSubmit?: (value: string) => void; // run when user presses Enter / submits
   placeholder?: string;
-  onSearch?: (query: string) => void;
 }
 
-export const SearchBar = ({ placeholder = "Search games...", onSearch }: SearchBarProps) => {
+export const SearchBar: React.FC<SearchBarProps> = ({
+  value,
+  onChange,
+  onSubmit,
+  placeholder = "Search…",
+}) => {
+  const handleFormSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    onSubmit?.(value.trim());
+  };
+
   return (
-    <div className="relative w-full max-w-2xl mx-auto">
-      <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
-      <Input
+    <form onSubmit={handleFormSubmit} className="w-full max-w-xl">
+      <input
         type="text"
+        value={value}
+        onChange={(e) => onChange(e.target.value)}  // just update text, no filtering yet
         placeholder={placeholder}
-        className="pl-10 h-10 text-sm bg-card border-border rounded-lg 
-                   focus:ring-2 focus:ring-primary focus:border-transparent
-                   transition-all duration-300 ease-out"
-        onChange={(e) => onSearch?.(e.target.value)}
+        className="w-full rounded-md border border-border bg-background px-4 py-2"
+        aria-label="Search games"
       />
-    </div>
+    </form>
   );
 };
