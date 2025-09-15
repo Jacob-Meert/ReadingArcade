@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import StackFireBall from "./games/StackFireBall.tsx";
-import TestPage from "./pages/Test";
+import TestPage from "./games/Test.tsx";
 
 const queryClient = new QueryClient();
 

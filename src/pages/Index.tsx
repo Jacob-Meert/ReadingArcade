@@ -115,7 +115,12 @@ const Index = () => {
       {/* Header with SearchBar */}
       <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-6 py-3">
-          <div className="flex flex-col items-center space-y-3">
+          <div className="flex flex justify-center space-x-4">
+            <img
+              src="/favicon.ico"
+              alt="ReadingArcade"
+              className="h-10 w-10"
+            />
             <SearchBar
               value={inputValue}
               onChange={setInputValue}

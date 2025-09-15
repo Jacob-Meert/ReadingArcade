@@ -40,20 +40,21 @@ All colors MUST be HSL.
     --radius: 0.75rem;
 
     /* Gaming category colors - bright solid colors */
-    --math: 220 100% 80%;
-    --reading: 145 90% 70%;
-    --science: 0 90% 75%;
-    --fun: 45 100% 75%;
-    --random: 270 90% 80%;
-    --all: 39, 100%, 50%;
+    --math: 196 100% 52.3%;
+    --reading: 152 100% 50.5%;
+    --science: 0 100% 50.5%;
+    --fun: 65 100% 50.5%;
+    --random: 289 100% 50.5%;
+    --all: 39 100% 50%;
 
     /* Gaming effects */
     --glow-primary: 240 75% 60%;
-    --glow-math: 220 85% 65%;
-    --glow-reading: 145 75% 55%;
-    --glow-science: 0 75% 60%;
-    --glow-fun: 45 85% 60%;
-    --glow-random: 270 75% 65%;
+    --glow-math: 196 100% 52.3%;
+    --glow-reading: 152 100% 50.5%;
+    --glow-science: 0 100% 50.5%;
+    --glow-fun: 65 100% 50.5%;
+    --glow-random: 289 100% 50.5%;
+    --glow-all: 39 100% 50%;
 
     --gradient-gaming: linear-gradient(135deg, hsl(var(--background)), hsl(220 15% 12%));
     --shadow-glow: 0 0 30px hsl(var(--glow-primary) / 0.3);
