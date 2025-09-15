@@ -6,6 +6,7 @@ const categories = [
   { id: "science", name: "Science", color: "science" },
   { id: "fun", name: "Fun", color: "fun" },
   { id: "random", name: "Random", color: "random" },
+  { id: "all", name: "All", color: "all" },
 ] as const;
 
 interface CategoryTabsProps {
