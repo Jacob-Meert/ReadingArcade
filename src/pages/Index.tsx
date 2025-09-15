@@ -26,7 +26,7 @@ const Index = () => {
   const [inputValue, setInputValue] = useState(""); // typing only
   const [searchQuery, setSearchQuery] = useState(""); // submitted query
 
-  const jsonUrl = `${import.meta.env.BASE_URL}games.JSON`;
+  const jsonUrl = `${import.meta.env.BASE_URL}games.json`;
 
   useEffect(() => {
     let cancelled = false;
