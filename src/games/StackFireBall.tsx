@@ -1,4 +1,3 @@
-
 // src/pages/GameEmbedTemplate.tsx
 import { useLayoutEffect, useRef, useState } from "react";
 import { SearchBar } from "@/components/SearchBar";
@@ -17,7 +16,7 @@ import { Link } from "react-router-dom";
  *   If the game won’t show inside the iframe, the server is likely blocking embeds.
  *   In that case, host the game yourself or ask the provider to allow your domain.
  */
-const EMBED_URL = "testURL";
+const EMBED_URL = "https://www.onlinegames.io/games/2021/unity/stack-fire-ball/index.html";
 
 export default function GameEmbedTemplate() {
   // Same simple logic as your Test page: local state for a controlled SearchBar; no routing here.
@@ -149,35 +148,3 @@ export default function GameEmbedTemplate() {
     </main>
   );
 }
-
-/* ===== Why this works =====
-   - Padding won't prevent vertical overflow. Instead, we size the center game container
-     to fill the viewport height minus the *actual* header height.
-   - We use 100svh (small viewport height) to behave correctly on mobile when browser chrome shows/hides.
-   - Measuring header height at runtime ensures accuracy even if the header’s content changes.
-
-   ===== Reuse per game =====
-   - Replace EMBED_URL for each game, or duplicate this file per game.
-   - If you prefer aspect-ratio boxing (like fixed 16:9) instead of full-height:
-       1) Remove the inline height style using calcEmbedHeight(...).
-       2) Use a padding-top trick:
-          <div style={{ paddingTop: "56.25%" }} className="relative ...">
-            <iframe className="absolute inset-0 w-full h-full" ... />
-          </div>
-
-   ===== Optional inline alternative (no external URL) =====
-   - If you want the game’s HTML to live *inside this same .tsx file*:
-       1) Define: const GAME_HTML = `<!doctype html> ... full HTML ... `;
-       2) Replace src={EMBED_URL} with: srcDoc={GAME_HTML}
-       3) Remove allowFullScreen if not needed (keeps it simple).
-
-   ===== Ads / rails =====
-   - Rails are 280px each on xl+ by default. Adjust widths/breakpoints to your needs:
-       xl:grid-cols-[300px_minmax(0,1fr)_300px]
-   - On smaller screens, they're hidden to keep the focus on the game.
-
-   ===== TSX helper function pattern =====
-   - calcEmbedHeight shows a typed function inside a component.
-   - If a helper doesn’t rely on state/props, you can also move it outside the component or export it from a utility module.
-*/
-

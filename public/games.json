@@ -1,56 +1,42 @@
 [
-  {
-    "id": "game-1",
-    "title": "Math Quiz",
-    "description": "Practice your arithmetic skills with timed questions.",
-    "category": "math",
-    "image": "/math-game-icon.jpg",
-    "rating": 4.5,
-    "url": "https://example.com/math-quiz"
-  },
-  {
-    "id": "game-2",
-    "title": "Reading Challenge",
-    "description": "Improve your vocabulary and comprehension with fun passages.",
-    "category": "reading",
-    "image": "/reading-game-icon.jpg",
-    "rating": 4.2,
-    "url": "https://example.com/reading-challenge"
-  },
-  {
-    "id": "game-3",
-    "title": "Penis Explorer",
-    "description": "Test your knowledge of planets, animals, and more!",
-    "category": "science",
-    "image": "/science-game-icon.jpg",
-    "rating": 4.6,
-    "url": "https://example.com/science-explorer"
-  },
-  {
-    "id": "game-4",
-    "title": "Puzzle Master",
-    "description": "Solve tricky puzzles and brain teasers.",
-    "category": "fun",
-    "image": "/fun-game-icon.jpg",
-    "rating": 4.0,
-    "url": "https://example.com/puzzle-master"
-  },
-  {
-    "id": "game-5",
-    "title": "Random Trivia",
-    "description": "A mix of random trivia questions across all subjects.",
-    "category": "random",
-    "image": "/random-game-icon.jpg",
-    "rating": 3.9,
-    "url": "https://example.com/random-trivia"
-  },
-  {
-    "id": "game-6",
-    "title": "Test Game",
-    "description": "A game made to test site functionality",
-    "category": "fun",
-    "image": "/random-game-icon.jpg",
-    "rating": 3.9,
-    "url": "/test"
-  }
+    {
+        "id": 1,
+        "title": "Stack Fire Ball",
+        "description": "Reach the end by guiding the ball through each stage, avoiding the dark tiles. This game is a combination between relaxation but also keeping attention to details. With modern graphics, you will enjoy knocking down the colorful tiles as fast as you can. Let the ball bounce and complete all the stages. Play Stack Fire Ball now!",
+        "category": "fun",
+        "image": "/Stack-Fire-Ball-icon.jpg",
+        "rating": 5,
+        "url": "/StackFireBall",
+        "embedding": "https://www.onlinegames.io/games/2021/unity/stack-fire-ball/index.html"
+    },
+    {
+        "id": 2,
+        "title": "Capybara Clicker Pro",
+        "description": "An idle clicker game in which you tap on the adorable Capybara to collect Capybara coins. Increase the number of coins you make by clicking on the cute animal every second and every click to achieve more significant figures! The goal of this game is to tap and earn coins. As you progress, you'll also be able to unlock new great characters!",
+        "category": "fun",
+        "image": "/Capybara-Clicker-Pro-icon.jpg",
+        "rating": 5,
+        "url": "/CapybaraClickerPro",
+        "embedding": "https://www.onlinegames.io/games/2023/q2/capybara-clicker-pro/index.html"
+    },
+    {
+        "id": 3,
+        "title": "Love Tester",
+        "description": "Do you want to know how much your crush falls for you? Here is a way to test the love of the one and only. Love Tester is an online game where you fill out your and your crush's names. Then, let the tester do all the calculations about how much they love you, miss you during the day, or have any second thoughts about you. We have to warn you. You may not always get the results you hoped for. Hold your head up! You can always test your other crushes' names and reconsider someone you have been unsure about.",
+        "category": "fun",
+        "image": "/Love-Test-icon.jpg",
+        "rating": 5,
+        "url": "/LoveTester",
+        "embedding": "https://www.onlinegames.io/games/2021/3/love-tester/index.html"
+    },
+    {
+        "id": 4,
+        "title": "Get On Top",
+        "description": "Remember those days when you and your brother used to wrestle for hours until one of you cried and complained to Mom? It was a real duel, wasn't it? You would flip over together like a human ball, with arms and legs flying in the air. So, we've brought sibling wrestling to the virtual realm. When Mom gets sick of your fights and forbids wrestling in the house, you can take your duel to the Get On Top game and resume your challenge in a less physical way.",
+        "category": "fun",
+        "image": "/Get-On-Top-icon.jpg",
+        "rating": 5,
+        "url": "/GetOnTop",
+        "embedding": "https://www.onlinegames.io/games/2024/code/6/get-on-top/index.html"
+    }
 ]

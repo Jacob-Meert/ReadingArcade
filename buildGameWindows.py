@@ -1,4 +1,55 @@
+import json
+import os
 
+"""
+DATA FORMAT:
+  {
+    "id": 2,
+    "title": "Stack Fire Ball",
+    "description": "Reach the end by guiding the ball through each stage, avoiding the dark tiles. This game is a combination between relaxation but also keeping attention to details. With modern graphics, you will enjoy knocking down the colorful tiles as fast as you can. Let the ball bounce and complete all the stages. Play Stack Fire Ball now!",
+    "category": "fun",
+    "image": "/Fire-Stack-Ball-icon.jpg",
+    "rating": 5,
+    "url": "/FireStackBall",
+    "embedding": "https://www.onlinegames.io/games/2021/unity/stack-fire-ball/index.html"
+  }
+
+CATAGORIES: math, reading, science, fun 
+"""
+
+def addNewGame(embedding, gameTitle, description, category, imageFile):
+    Categories = ["math", "reading", "science"]
+    Structure = {
+          "id":0,
+          "title":gameTitle,
+          "description":description,
+          "category":"",
+          "image":"/"+imageFile,
+          "rating":5,
+          "url":"/" + gameTitle.replace(" ", ""),
+          "embedding": embedding
+    }
+
+    if category in Categories:
+        Structure["category"] = category
+    else:
+        Structure["category"] = "fun"
+    
+    try:
+        with open('./public/games.json', 'r') as file:
+            data = json.load(file)
+
+        newID = data[len(data)-1]["id"] + 1
+        Structure["id"] = newID
+        data.append(Structure)
+
+        with open('./public/games.json', 'w') as file:
+            json.dump(data, file, indent=4)
+
+        dirPath = "./src/games"
+
+        with open(dirPath+Structure["url"]+".tsx", 'w') as file:
+            file.write('''
 // src/pages/GameEmbedTemplate.tsx
 import { useLayoutEffect, useRef, useState } from "react";
 import { SearchBar } from "@/components/SearchBar";
@@ -17,7 +68,7 @@ import { Link } from "react-router-dom";
  *   If the game won’t show inside the iframe, the server is likely blocking embeds.
  *   In that case, host the game yourself or ask the provider to allow your domain.
  */
-const EMBED_URL = "testURL";
+const EMBED_URL = "'''+Structure["embedding"]+'''";
 
 export default function GameEmbedTemplate() {
   // Same simple logic as your Test page: local state for a controlled SearchBar; no routing here.
@@ -181,3 +232,12 @@ export default function GameEmbedTemplate() {
    - If a helper doesn’t rely on state/props, you can also move it outside the component or export it from a utility module.
 */
 
+''')
+    except:
+        print("FAILED TO ADD NEW ENTRY")
+        return False
+    print("NEW ENTRY ADDED, SUCCESS!")
+    return True
+
+
+addNewGame(embedding="https://www.onlinegames.io/games/2024/code/6/get-on-top/index.html", gameTitle="Get On Top", description="Remember those days when you and your brother used to wrestle for hours until one of you cried and complained to Mom? It was a real duel, wasn't it? You would flip over together like a human ball, with arms and legs flying in the air. So, we've brought sibling wrestling to the virtual realm. When Mom gets sick of your fights and forbids wrestling in the house, you can take your duel to the Get On Top game and resume your challenge in a less physical way.", category="fun", imageFile="Get-On-Top-icon.jpg")
