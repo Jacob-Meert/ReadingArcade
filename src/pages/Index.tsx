@@ -91,6 +91,12 @@ const Index = () => {
 
   // Tab change: clear both search states and remove ?search= from URL
   const handleCategoryChange = (id: string) => {
+    if (id === "random") {
+      const randomGame = games[Math.floor(Math.random() * games.length)];
+      handlePick(randomGame);
+      return;
+    }
+    
     setActiveCategory(id);
     setSearchQuery("");
     setInputValue("");

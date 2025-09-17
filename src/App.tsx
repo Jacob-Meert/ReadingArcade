@@ -15,6 +15,7 @@ import FastFoodRush from "./games/FastFoodRush.tsx"
 import StickmanParkour from "./games/StickmanParkour.tsx"
 import SuperCarDriving from "./games/SuperCarDriving.tsx"
 import KicktheDummy from "./games/KicktheDummy.tsx"
+import MathsForKids from "./games/MathsForKids.tsx"
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,7 @@ const App = () => (
 					<Route path="/StickmanParkour" element={<StickmanParkour/>} />
 					<Route path="/SuperCarDriving" element={<SuperCarDriving/>} />
 					<Route path="/KicktheDummy" element={<KicktheDummy/>} />
+					<Route path="/MathsForKids" element={<MathsForKids/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
