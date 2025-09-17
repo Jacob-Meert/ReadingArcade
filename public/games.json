@@ -58,5 +58,45 @@
         "rating": 5,
         "url": "/EscapeCar",
         "embedding": "https://cloud.onlinegames.io/games/2025/unity2/escape-car/index-og.html"
+    },
+    {
+        "id": 7,
+        "title": "Fast Food Rush",
+        "description": "You're at Burger King, sinking your teeth into a juicy cheeseburger and finishing it off in about 15 minutes flat. But just this once, before you head out, pause and take a quick look around. Employees are rushing nonstop, flipping sizzling patties, taking orders at the counter, pouring ice-cold drinks, and wiping down tables. At this point, running your own burger joint might seem pretty appealing, at least to some people. Think about it: flipping burgers, serving happy customers, making money from your own fast food business. It all sounds simple, satisfying, and fun. But before you get overly excited and pour thousands of dollars into your burger empire dreams, how about giving it a test drive first? Let\u2019s play a game. It\u2019s called Fast Food Rush.",
+        "category": "fun",
+        "image": "/Fast-Food-Rush-icon.jpg",
+        "rating": 5,
+        "url": "/FastFoodRush",
+        "embedding": "https://cloud.onlinegames.io/games/2025/unity/fast-food-rush/index-og.html"
+    },
+    {
+        "id": 8,
+        "title": "Stickman Parkour",
+        "description": "Stickman Parkour is an online platformer game that you can play on your browser, embracing the easy-to-learn but hard-to-master mechanics. Collect keys, open chests, pass levels and help him find his way out across 30 levels.",
+        "category": "fun",
+        "image": "/Stickman-Parkour-icon.jpg",
+        "rating": 5,
+        "url": "/StickmanParkour",
+        "embedding": "https://cloud.onlinegames.io/games/2024/construct/219/stickman-parkour/index-og.html"
+    },
+    {
+        "id": 9,
+        "title": "Super Car Driving",
+        "description": "Super Car Driving is an online car game where you get to drive super-performing high-end models like Ferrari, Lamborghini, Porsche and more.\n\nThis online driving game offers a full package with 3 game modes that can appeal to every taste. Adrenaline seekers can enjoy completing stunt challenges while skill gamers maneuver their supercars in the lots of parking levels. Meanwhile, free spirits can hit the road on a GTA ViceCity-like map and test their sports cars' performance. All 3 in one game. So, what are you waiting for? Start playing it! Happy driving, gamers",
+        "category": "fun",
+        "image": "/Super-Car-Driving-icon.jpg",
+        "rating": 5,
+        "url": "/SuperCarDriving",
+        "embedding": "https://cloud.onlinegames.io/games/2024/unity2/super-car-driving/index-og.html"
+    },
+    {
+        "id": 10,
+        "title": "Kick the Dummy",
+        "description": "Sometimes, the stress of daily life overwhelms you, and you feel like punching the wall. All you need at that moment is to release that stress. There is just something for you here! Kick The Dummy is an action game where you punch, shoot, bomb and crash the robotic victim. In fact, this game is such a game that you can even throw a bench at the robot. The liquids on the screen, when you hit the robot and the sounds will help you a lot in satisfying your primitive emotions. We can understand you; this game was created with this motivation. Just enjoy the game and relieve your daily stress!",
+        "category": "fun",
+        "image": "/Kick-The-Dummy-icon.jpg",
+        "rating": 5,
+        "url": "/KicktheDummy",
+        "embedding": "https://www.onlinegames.io/games/2022/construct/153/kick-the-dummy/index.html"
     }
 ]

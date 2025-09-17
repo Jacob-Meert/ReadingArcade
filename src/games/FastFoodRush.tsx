@@ -1,55 +1,4 @@
-import json
-import os
 
-"""
-DATA FORMAT:
-  {
-    "id": 2,
-    "title": "Stack Fire Ball",
-    "description": "Reach the end by guiding the ball through each stage, avoiding the dark tiles. This game is a combination between relaxation but also keeping attention to details. With modern graphics, you will enjoy knocking down the colorful tiles as fast as you can. Let the ball bounce and complete all the stages. Play Stack Fire Ball now!",
-    "category": "fun",
-    "image": "/Fire-Stack-Ball-icon.jpg",
-    "rating": 5,
-    "url": "/FireStackBall",
-    "embedding": "https://www.onlinegames.io/games/2021/unity/stack-fire-ball/index.html"
-  }
-
-CATAGORIES: math, reading, science, fun 
-"""
-
-def addNewGame(embedding, gameTitle, description, category, imageFile):
-    Categories = ["math", "reading", "science"]
-    Structure = {
-          "id":0,
-          "title":gameTitle,
-          "description":description,
-          "category":"",
-          "image":"/"+imageFile,
-          "rating":5,
-          "url":"/" + gameTitle.replace(" ", ""),
-          "embedding": embedding
-    }
-
-    if category in Categories:
-        Structure["category"] = category
-    else:
-        Structure["category"] = "fun"
-    
-    try:
-        with open('./public/games.json', 'r') as file:
-            data = json.load(file)
-
-        newID = data[len(data)-1]["id"] + 1
-        Structure["id"] = newID
-        data.append(Structure)
-
-        with open('./public/games.json', 'w') as file:
-            json.dump(data, file, indent=4)
-
-        dirPath = "./src/games"
-
-        with open(dirPath+Structure["url"]+".tsx", 'w') as file:
-            file.write('''
 // src/pages/GameEmbedTemplate.tsx
 import { useLayoutEffect, useRef, useState } from "react";
 import { SearchBar } from "@/components/SearchBar";
@@ -68,7 +17,7 @@ import { Link } from "react-router-dom";
  *   If the game won’t show inside the iframe, the server is likely blocking embeds.
  *   In that case, host the game yourself or ask the provider to allow your domain.
  */
-const EMBED_URL = "'''+Structure["embedding"]+'''";
+const EMBED_URL = "https://cloud.onlinegames.io/games/2025/unity/fast-food-rush/index-og.html";
 
 export default function GameEmbedTemplate() {
   // Same simple logic as your Test page: local state for a controlled SearchBar; no routing here.
@@ -232,57 +181,3 @@ export default function GameEmbedTemplate() {
    - If a helper doesn’t rely on state/props, you can also move it outside the component or export it from a utility module.
 */
 
-''')
-    except:
-        print("FAILED TO ADD NEW ENTRY")
-        return False
-    rebuildWindow()
-    print("NEW ENTRY ADDED, SUCCESS!")
-    return True
-
-def rebuildWindow():
-    try:
-      with open('./public/games.json', 'r') as file:
-        data = json.load(file)
-
-        imports = """import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index.tsx";
-import NotFound from "./pages/NotFound.tsx";"""
-        for entry in data:
-            imports += "\nimport " + entry["url"][1:] + ' from "./games/' + entry["url"][1:] + '.tsx"'
-
-        imports += """\n
-const queryClient = new QueryClient();
-
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />"""
-        
-        for entry in data:
-            imports += '\n\t\t\t\t\t<Route path="' + entry["url"] + '" element={<' + entry["url"][1:] +  "/>} />"
-        imports += """\n          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
-
-export default App;"""
-
-      with open("./src/App.tsx", "w") as file:
-          file.write(imports)
-      print("App file successfully built")
-      return True
-    except:
-      return False
-
-addNewGame(embedding="https://www.onlinegames.io/games/2022/construct/153/kick-the-dummy/index.html", gameTitle="Kick the Dummy", description="Sometimes, the stress of daily life overwhelms you, and you feel like punching the wall. All you need at that moment is to release that stress. There is just something for you here! Kick The Dummy is an action game where you punch, shoot, bomb and crash the robotic victim. In fact, this game is such a game that you can even throw a bench at the robot. The liquids on the screen, when you hit the robot and the sounds will help you a lot in satisfying your primitive emotions. We can understand you; this game was created with this motivation. Just enjoy the game and relieve your daily stress!", category="fun", imageFile="Kick-The-Dummy-icon.jpg")
