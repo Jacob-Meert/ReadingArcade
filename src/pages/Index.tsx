@@ -36,6 +36,7 @@ const Index = () => {
   
   const navigate = useNavigate();
   
+  
   // Fetch games.json for the grid
   useEffect(() => {
     let cancelled = false;
@@ -96,7 +97,7 @@ const Index = () => {
       handlePick(randomGame);
       return;
     }
-    
+
     setActiveCategory(id);
     setSearchQuery("");
     setInputValue("");
@@ -149,6 +150,15 @@ const Index = () => {
           />
         </div>
       </section>
+
+      {/* Instructional Area */}
+      <div className="container mx-auto px-6 py-3">
+        <div className="bg-muted/50 p-3 rounded-lg text-center">
+          <p className="text-sm text-muted-foreground">
+            Tip: Press 'Caps Lock' to hide the screen (works only when clicked out of game)
+          </p>
+        </div>
+      </div>
 
       {/* Games Grid */}
       <section className="py-6">

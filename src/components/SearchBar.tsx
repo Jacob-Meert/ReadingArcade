@@ -1,6 +1,8 @@
 // src/components/SearchBar.tsx
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ReactDOM from 'react-dom';
+import { useCapsLock } from '@/contexts/CapsLockContexts';
 
 /** Lightweight suggestion item, local to SearchBar */
 type MiniGame = {
@@ -20,6 +22,29 @@ interface SearchBarProps {
   maxVisible?: number;
 }
 
+// Create a portal container for the overlay
+const CapsLockOverlay: React.FC<{ show: boolean }> = ({ show }) => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    return () => setMounted(false);
+  }, []);
+
+  if (!mounted || !show) return null;
+
+  return ReactDOM.createPortal(
+    <div className="fixed inset-0 z-[9999] pointer-events-none">
+      <img
+        src="/capslock-image.png" // Replace with your image path
+        alt="Caps Lock is activated"
+        className="w-full h-full object-cover"
+      />
+    </div>,
+    document.body
+  );
+};
+
 export const SearchBar: React.FC<SearchBarProps> = ({
   value,
   onChange,
@@ -30,6 +55,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
   maxVisible = 8,
 }) => {
   const navigate = useNavigate();
+  const { isCapsLockOn } = useCapsLock();
 
   const [open, setOpen] = useState(false);           // suggestions popup visible?
   const [allMini, setAllMini] = useState<MiniGame[]>([]); // cached suggestions list
@@ -96,61 +122,66 @@ export const SearchBar: React.FC<SearchBarProps> = ({
   };
 
   return (
-    <div ref={containerRef} className="relative w-full max-w-xl">
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          handleSubmit();
-        }}
-      >
-        <input
-          ref={inputRef}
-          type="text"
-          value={value}
-          onChange={(e) => {
-            onChange(e.target.value);
-            const q = e.target.value.trim();
-            setOpen(q.length >= minChars && filtered.length > 0);
-          }}
-          onFocus={() => setOpen(filtered.length > 0)}
-          placeholder={placeholder}
-          className="w-full rounded-md border border-border bg-background px-4 py-2"
-          aria-label="Search games"
-          autoComplete="off"
-        />
-      </form>
+    <>
+      {/* Caps Lock Overlay Portal - renders directly into body */}
+      <CapsLockOverlay show={isCapsLockOn} />
 
-      {/* Mouse-only suggestions popup */}
-      {open && filtered.length > 0 && (
-        <div
-          className="absolute z-50 mt-2 w-full rounded-lg border border-border bg-popover shadow-lg"
-          role="listbox"
+      <div ref={containerRef} className="relative w-full max-w-xl">
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleSubmit();
+          }}
         >
-          {filtered.map((item) => (
-            <button
-              key={item.id ?? item.url}
-              type="button"
-              onClick={() => {
-                setOpen(false);
-                onPick?.(item); // currently you won't pass this; fine to no-op
-              }}
-              className="flex w-full items-center gap-3 p-2 text-left hover:bg-accent"
-              role="option"
-            >
-              <img
-                src={item.image}
-                alt={item.title}
-                className="h-8 w-8 rounded object-cover"
-                loading="lazy"
-              />
-              <div className="flex flex-col">
-                <span className="text-sm font-medium">{item.title}</span>
-                <span className="text-xs text-muted-foreground truncate">{item.url}</span>
-              </div>
-            </button>
-          ))}
-        </div>
-      )}
-    </div>
+          <input
+            ref={inputRef}
+            type="text"
+            value={value}
+            onChange={(e) => {
+              onChange(e.target.value);
+              const q = e.target.value.trim();
+              setOpen(q.length >= minChars && filtered.length > 0);
+            }}
+            onFocus={() => setOpen(filtered.length > 0)}
+            placeholder={placeholder}
+            className="w-full rounded-md border border-border bg-background px-4 py-2"
+            aria-label="Search games"
+            autoComplete="off"
+          />
+        </form>
+
+        {/* Mouse-only suggestions popup */}
+        {open && filtered.length > 0 && (
+          <div
+            className="absolute z-50 mt-2 w-full rounded-lg border border-border bg-popover shadow-lg"
+            role="listbox"
+          >
+            {filtered.map((item) => (
+              <button
+                key={item.id ?? item.url}
+                type="button"
+                onClick={() => {
+                  setOpen(false);
+                  onPick?.(item);
+                }}
+                className="flex w-full items-center gap-3 p-2 text-left hover:bg-accent"
+                role="option"
+              >
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="h-8 w-8 rounded object-cover"
+                  loading="lazy"
+                />
+                <div className="flex flex-col">
+                  <span className="text-sm font-medium">{item.title}</span>
+                  <span className="text-xs text-muted-foreground truncate">{item.url}</span>
+                </div>
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+    </>
   );
 };

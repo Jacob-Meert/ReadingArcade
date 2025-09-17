@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { CapsLockProvider } from "./contexts/CapsLockContexts.tsx";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import StackFireBall from "./games/StackFireBall.tsx"
@@ -20,29 +21,31 @@ import MathsForKids from "./games/MathsForKids.tsx"
 const queryClient = new QueryClient();
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-					<Route path="/StackFireBall" element={<StackFireBall/>} />
-					<Route path="/CapybaraClickerPro" element={<CapybaraClickerPro/>} />
-					<Route path="/LoveTester" element={<LoveTester/>} />
-					<Route path="/GetOnTop" element={<GetOnTop/>} />
-					<Route path="/BlockBlast" element={<BlockBlast/>} />
-					<Route path="/EscapeCar" element={<EscapeCar/>} />
-					<Route path="/FastFoodRush" element={<FastFoodRush/>} />
-					<Route path="/StickmanParkour" element={<StickmanParkour/>} />
-					<Route path="/SuperCarDriving" element={<SuperCarDriving/>} />
-					<Route path="/KicktheDummy" element={<KicktheDummy/>} />
-					<Route path="/MathsForKids" element={<MathsForKids/>} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+  <CapsLockProvider>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/StackFireBall" element={<StackFireBall/>} />
+            <Route path="/CapybaraClickerPro" element={<CapybaraClickerPro/>} />
+            <Route path="/LoveTester" element={<LoveTester/>} />
+            <Route path="/GetOnTop" element={<GetOnTop/>} />
+            <Route path="/BlockBlast" element={<BlockBlast/>} />
+            <Route path="/EscapeCar" element={<EscapeCar/>} />
+            <Route path="/FastFoodRush" element={<FastFoodRush/>} />
+            <Route path="/StickmanParkour" element={<StickmanParkour/>} />
+            <Route path="/SuperCarDriving" element={<SuperCarDriving/>} />
+            <Route path="/KicktheDummy" element={<KicktheDummy/>} />
+            <Route path="/MathsForKids" element={<MathsForKids/>} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  </CapsLockProvider>
 );
 
 export default App;

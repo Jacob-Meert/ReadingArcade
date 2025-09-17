@@ -285,4 +285,4 @@ export default App;"""
     except:
       return False
 
-addNewGame(embedding="https://kidmons.com/game/maths-for-kids", gameTitle="Maths For Kids", description="Make learning maths fun and exciting with our Math Games for Kids! Designed especially for young minds, this free online game helps children practice addition, subtraction, multiplication, and division in an interactive way.", category="math", imageFile="Maths-For-Kids-icon.jpg")
+addNewGame(embedding="https://cdn.htmlgames.com/NumberMerge/index.html", gameTitle="Maths For Kids", description="", category="math", imageFile="Maths-For-Kids-icon.jpg")
