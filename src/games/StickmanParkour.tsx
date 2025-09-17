@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
  *   If the game won’t show inside the iframe, the server is likely blocking embeds.
  *   In that case, host the game yourself or ask the provider to allow your domain.
  */
-const EMBED_URL = "https://cloud.onlinegames.io/games/2024/unity2/super-car-driving/index-og.html";
+const EMBED_URL = "https://cloud.onlinegames.io/games/2024/construct/219/stickman-parkour/index-og.html";
 
 export default function GameEmbedTemplate() {
   // Same simple logic as your Test page: local state for a controlled SearchBar; no routing here.
