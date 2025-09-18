@@ -13,7 +13,7 @@
         "id": 2,
         "title": "Capybara Clicker Pro",
         "description": "An idle clicker game in which you tap on the adorable Capybara to collect Capybara coins. Increase the number of coins you make by clicking on the cute animal every second and every click to achieve more significant figures! The goal of this game is to tap and earn coins. As you progress, you'll also be able to unlock new great characters!",
-        "category": "fun",
+        "category": "math",
         "image": "/Capybara-Clicker-Pro-icon.jpg",
         "rating": 5,
         "url": "/CapybaraClickerPro",
@@ -23,7 +23,7 @@
         "id": 3,
         "title": "Love Tester",
         "description": "Do you want to know how much your crush falls for you? Here is a way to test the love of the one and only. Love Tester is an online game where you fill out your and your crush's names. Then, let the tester do all the calculations about how much they love you, miss you during the day, or have any second thoughts about you. We have to warn you. You may not always get the results you hoped for. Hold your head up! You can always test your other crushes' names and reconsider someone you have been unsure about.",
-        "category": "fun",
+        "category": "reading",
         "image": "/Love-Test-icon.jpg",
         "rating": 5,
         "url": "/LoveTester",
@@ -53,7 +53,7 @@
         "id": 6,
         "title": "Escape Car",
         "description": "Do you remember the very first Grand Theft Auto? That old-school, top-down chaos. Think of that and give it a fresh coat of chunky 3D graphics. Next, drop that straight in your browser. Yes, it's Escape Car, a free online GTA game where you bolt through a mini-city, dodge police cars, tanks, helicopters and scoop up stacks of cash. Every tight drift, every split-second fake-out, and every totaled police cruiser bumps your score higher. Hang on long enough, and you\u2019ll leave with pockets full of upgrade money and a grin wider than the avenue.",
-        "category": "fun",
+        "category": "science",
         "image": "/Escape-Car-icon.jpg",
         "rating": 5,
         "url": "/EscapeCar",
@@ -158,5 +158,75 @@
         "rating": 5,
         "url": "/Wordle",
         "embedding": "https://octokatherine.github.io/word-master/"
+    },
+    {
+        "id": 17,
+        "title": "Om Nom Run",
+        "description": "Run alongside Om Nom in his famous adventure, now finally in immersive and full-responsive HTML5. Try to run as far as possible by avoiding the dangerous obstacles and enemies, collect all coins and transform Om Nom into the fastest runner possible. Use the power-ups as smart as possible to explore the beautiful world with all it's beautiful areas, but be aware of the dangers that lurk inside of them. Are you ready to explore the world of Om Nom Run and reach the highest of highscores?",
+        "category": "fun",
+        "image": "/Om-Nom-Run-icon.jpg",
+        "rating": 5,
+        "url": "/OmNomRun",
+        "embedding": "https://play.famobi.com/om-nom-run"
+    },
+    {
+        "id": 18,
+        "title": "Garden Bloom",
+        "description": "Here it comes! The ultimate Match-3 title! Welcome to the magnificent 'Garden Bloom'! Immerse yourself in the colorful garden and accompany Lucy on her exciting adventures! Match at least 3 flowers of the same color to get flowertastic results! The more you can merge, the more powerful the effect will be! Use mighty power-ups if you think you need help. On top of that you are able to decorate your own garden! How could it be any better? 2000 well designed levels will await you! So it's on you! Are you ready",
+        "category": "fun",
+        "image": "/Garden-Bloom-icon.jpg",
+        "rating": 5,
+        "url": "/GardenBloom",
+        "embedding": "https://games.cdn.famobi.com/html5games/g/garden-bloom/v570/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=3f504f07-d674-4a4d-a02e-89e7414d8f26&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=270&original_ref="
+    },
+    {
+        "id": 19,
+        "title": "Bubble Tower 3D",
+        "description": "If you're a friend of oldschool bubbleshooters then you'll love Bubble Tower 3D. Experience this reinvented videogames classic in a comepletely new dimension and an amazing aztec setting! Try to connect at least 3 bubbles of the same color to reach the top of the tower. Not enough action happening? Try out the destructive fireball and watch him do his magic. Let's go and reach the highscore.",
+        "category": "fun",
+        "image": "/Bubble-Tower-3D-icon.jpg",
+        "rating": 5,
+        "url": "/BubbleTower3D",
+        "embedding": "https://games.cdn.famobi.com/html5games/b/bubble-tower-3d/v170/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=1385d98a-b5f2-4339-bce7-b99a8dd2e8b0&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=272&original_ref="
+    },
+    {
+        "id": 20,
+        "title": "Cannon Balls 3D",
+        "description": "Try to be the master of destruction, heat up the buildings neatly and show no mercy! In 'Cannon Balls 3D' it depends on how skillfully you place the shots so that the structures collapse as efficiently as possible. Watch your ammo, because it's limited. But don't worry. There will also come a time when you will bring the cannon to the edge of functionality. Especially when the great bombs are used. So what are you waiting for?",
+        "category": "fun",
+        "image": "/Cannon-Balls-3D-icon.jpg",
+        "rating": 5,
+        "url": "/CannonBalls3D",
+        "embedding": "https://games.cdn.famobi.com/html5games/c/cannon-balls-3d/v230/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=3ffa11c2-61da-4974-892b-473582253371&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=273&original_ref="
+    },
+    {
+        "id": 21,
+        "title": "Eight Ball Billiards Classic",
+        "description": "Train your billiard skills and play against the computer or your friend in this 8-ball Pool sports game! Select a difficulty that matches your abilities and start pocketing the balls. The higher the difficulty, the higher the bonus points you receive when you win a match. Aim carefully and use the zoom to adjust the spin of the cue ball. Drag the billiard cue to control the power and try to earn as many points as possible!",
+        "category": "fun",
+        "image": "/Eight-Ball-Billiards-Classic-icon.jpg",
+        "rating": 5,
+        "url": "/EightBallBilliardsClassic",
+        "embedding": "https://games.cdn.famobi.com/html5games/0/8-ball-billiards-classic/f6589445/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=82038e98-d4e1-46dd-8de9-1460d1395eab&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=278&original_ref="
+    },
+    {
+        "id": 22,
+        "title": "Archery World Tour",
+        "description": "Grab a bow and put your archery skills to the ultimate test! Play in two different modes: select World Tour and travel to a variety of exotic locations. Try to earn three stars in 50 increasingly challenging levels to become a true champion. Or choose the Balloon Challenge mode for quick fire game-play, hit the balloons to progress and earn as many points as possible. Aim carefully, keep a steady hand and watch out for the wind direction and power before you shoot. Multiple distance targets that can move, rotate or obscure your shot are waiting for you. Can you master them all?.",
+        "category": "fun",
+        "image": "/Archery-World-Tour-icon.jpg",
+        "rating": 5,
+        "url": "/ArcheryWorldTour",
+        "embedding": "https://games.cdn.famobi.com/html5games/a/archery-world-tour/v610/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=ebcb987a-3fd0-4b4a-bae6-f456fff9cac3&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=282&original_ref="
+    },
+    {
+        "id": 23,
+        "title": "Moto X3M Pool Party",
+        "description": "Moto X3M is back and in this sequel you'll definitely get wet! Try to beat 22 summer-themed levels as quickly as you can. Race through giant underwater tubes, get catapulted into the air, avoid spiky obstacles and perform crazy stunts for bonus time. Don't worry about crashing - you can always start from the latest checkpoint, but you lose valuable seconds. So try to complete each track in one go to win all 3 stars at the end of a level. Unlock cool new bikes, put on some swimwear and join the pool party fun!",
+        "category": "fun",
+        "image": "/Moto-X3M-Pool-Party-icon.jpg",
+        "rating": 5,
+        "url": "/MotoX3MPoolParty",
+        "embedding": "https://games.cdn.famobi.com/html5games/m/moto-x3m-pool-party/v080/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=b2102250-eb51-4704-9cab-ff296491cc68&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=292&original_ref="
     }
 ]

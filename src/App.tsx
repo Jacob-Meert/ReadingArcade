@@ -22,6 +22,13 @@ import MatchstickMathPuzzle from "./games/MatchstickMathPuzzle.tsx"
 import MathSlither from "./games/MathSlither.tsx"
 import MedievalCastleDefense from "./games/MedievalCastleDefense.tsx"
 import Wordle from "./games/Wordle.tsx"
+import OmNomRun from "./games/OmNomRun.tsx"
+import GardenBloom from "./games/GardenBloom.tsx"
+import BubbleTower3D from "./games/BubbleTower3D.tsx"
+import CannonBalls3D from "./games/CannonBalls3D.tsx"
+import EightBallBilliardsClassic from "./games/EightBallBilliardsClassic.tsx"
+import ArcheryWorldTour from "./games/ArcheryWorldTour.tsx"
+import MotoX3MPoolParty from "./games/MotoX3MPoolParty.tsx"
 
 const queryClient = new QueryClient();
 
@@ -50,6 +57,13 @@ const App = () => (
 					<Route path="/MathSlither" element={<MathSlither/>} />
 					<Route path="/MedievalCastleDefense" element={<MedievalCastleDefense/>} />
 					<Route path="/Wordle" element={<Wordle/>} />
+					<Route path="/OmNomRun" element={<OmNomRun/>} />
+					<Route path="/GardenBloom" element={<GardenBloom/>} />
+					<Route path="/BubbleTower3D" element={<BubbleTower3D/>} />
+					<Route path="/CannonBalls3D" element={<CannonBalls3D/>} />
+					<Route path="/EightBallBilliardsClassic" element={<EightBallBilliardsClassic/>} />
+					<Route path="/ArcheryWorldTour" element={<ArcheryWorldTour/>} />
+					<Route path="/MotoX3MPoolParty" element={<MotoX3MPoolParty/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
