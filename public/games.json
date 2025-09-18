@@ -108,5 +108,55 @@
         "rating": 5,
         "url": "/MathsForKids",
         "embedding": "https://kidmons.com/game/maths-for-kids"
+    },
+    {
+        "id": 12,
+        "title": "Number Merge",
+        "description": "A puzzle that grows with every move! Slide tiles across the board and merge identical numbers to create bigger and bigger values. Simple to learn, but endlessly addictive\u2014how high can you go before the grid fills up?",
+        "category": "math",
+        "image": "/Number-Merge-icon.jpg",
+        "rating": 5,
+        "url": "/NumberMerge",
+        "embedding": "https://cdn.htmlgames.com/NumberMerge/index.html"
+    },
+    {
+        "id": 13,
+        "title": "Matchstick Math Puzzle",
+        "description": "Think outside the box with this clever math twist! Rearrange matchsticks to correct broken equations and solve brain-bending problems. Each level offers a fresh way to test your logic and creativity.",
+        "category": "math",
+        "image": "/Matchstick-Math-Puzzle-icon.jpg",
+        "rating": 5,
+        "url": "/MatchstickMathPuzzle",
+        "embedding": "https://cdn.htmlgames.com/MatchstickMathPuzzle/index.html"
+    },
+    {
+        "id": 14,
+        "title": "Math Slither",
+        "description": "Classic Slither.io meets quick-fire math! Guide your snake through the field by answering math questions correctly. Grow larger with every success and slither your way to the top of the leaderboard!",
+        "category": "math",
+        "image": "/Math-Slither-icon.jpg",
+        "rating": 5,
+        "url": "/MathSlither",
+        "embedding": "https://www.mathgames.com/play/math-slither.html"
+    },
+    {
+        "id": 15,
+        "title": "Medieval Castle Defense",
+        "description": "Defend your castle from waves of enemies! Build towers, upgrade your defenses, and watch your castle stand strong against the onslaught. Can you hold out until the final wave?",
+        "category": "science",
+        "image": "/Medieval-Castle-Defense-icon.jpg",
+        "rating": 5,
+        "url": "/MedievalCastleDefense",
+        "embedding": "https://cdn.htmlgames.com/MedievalCastleDefense/index.html"
+    },
+    {
+        "id": 16,
+        "title": "Wordle",
+        "description": "A daily word game that challenges your vocabulary and word-building skills. Guess the word before time runs out!",
+        "category": "reading",
+        "image": "/Wordle-icon.jpg",
+        "rating": 5,
+        "url": "/Wordle",
+        "embedding": "https://octokatherine.github.io/word-master/"
     }
 ]
